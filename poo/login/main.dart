@@ -46,14 +46,25 @@ void imprimirBarra(){
   print("--------------------------------------------------");
 }
 void main(){
+  // Simula uma tela de login, com email e senha valida
+  // stdout.write("Bem-vindo ao programa de cadatro de Email e Senha!\n");
+  // String email = validarEmail();
+  // imprimirBarra();
+  // String senha = validarSenha();
+  // imprimirBarra();
 
-  stdout.write("Bem-vindo ao programa de cadatro de Email e Senha!\n");
-  String email = validarEmail();
-  imprimirBarra();
-  String senha = validarSenha();
-  imprimirBarra();
+
+  String email = "Flutter@gmail.com";
+  String senha = "Flutter2025";
   Usuario usuario = Usuario(email: email, senha: senha);
+  print(usuario.email);
   print("Salvando no banco de dados...");
   sleep(Duration(seconds: 2));
   print(usuario);
+  try{
+    usuario.email = 'dasjdasjkdas';
+  }catch(e){
+    print("Erro: $e");
+  }
+  //
 }
