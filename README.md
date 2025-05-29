@@ -1,30 +1,16 @@
-# 🚀 Flutter Start - Primeiros passos com Flutter
+# expo_tech_roleta
 
-|        📚 **Professor**        |               🏫 **Centro**              |   ⏳ **Duração**   |
-| :----------------------------: | :--------------------------------------: | :---------------: |
-| Cláudio Marzo Santarem Santana | Instituto de Educação e Tecnologia Maués | 2 meses e 14 dias |
+A new Flutter project.
 
+## Getting Started
 
-## 📝 Conteúdo Programático
+This project is a starting point for a Flutter application.
 
-- [Mapa Mental do Curso](https://www.mindmeister.com/app/map/3677947493)
+A few resources to get you started if this is your first Flutter project:
 
-| 🔢 **Módulo** | 📋 **Tópicos** |
-|:---|:---|
-| **1. Introdução a Dart** | • Fundamentos<br>• Estrutura de Controle<br>• Funções<br>• Orientação a Objetos |
-| **2. Introdução ao Flutter** | • Fundamentos<br>• Primeiro App<br>• Segundo App |
-| **3. Projeto Final** | • Desenvolvimento em dupla<br>• Entrega e apresentação |
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-
-## 🔧 Como Clonar o Repositório
-
-```bash
-git clone https://github.com/ClaudioMarzo/flutter_start.git
-cd flutter-start
-```
-
-
-
-## 📬 Contato
-
-- ✉️ **Linkedin:** [Cláudio Marzo](https://www.linkedin.com/in/claudio-marzo-santana/)
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

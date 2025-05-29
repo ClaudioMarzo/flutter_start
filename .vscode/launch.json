@@ -1,0 +1,55 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // Para mais detalhes: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+
+    // ========== MODO DEBUG ==========
+
+    {
+      "name": "Debug Android",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      // Executa no primeiro dispositivo Android/emulador disponível.
+      // Se quiser um deviceId específico, substitua "android" pelo ID exato (ex: "emulator-5554").
+      "deviceId": "android"
+    },
+    {
+      "name": "Debug Web – Chrome",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      // Para web via Chrome
+      "deviceId": "chrome"
+    },
+    {
+      "name": "Debug iOS Simulator",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      // Para o simulador iOS padrão. Se tiver outro, troque pelo ID retornado em `flutter devices`.
+      "deviceId": "ios"
+    },
+
+    // ========== MODO PROFILE ==========
+
+    {
+      "name": "expo_tech_roleta (Profile Mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+
+    // ========== MODO RELEASE ==========
+
+    {
+      "name": "expo_tech_roleta (Release Mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+
+  ]
+}
