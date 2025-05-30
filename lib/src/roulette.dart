@@ -1,13 +1,14 @@
 import 'dart:async';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
+import 'package:expo_tech_roleta/src/style/buttom_custom.dart';
+import 'package:expo_tech_roleta/src/style/buttom_result.dart';
+import 'package:expo_tech_roleta/src/util/list_opcions.dart';
+import 'package:expo_tech_roleta/src/util/roulette_state.dart';
 import 'package:expo_tech_roleta/src/util/stye_items.dart';
 import 'package:expo_tech_roleta/src/util/style_title.dart';
-import 'package:expo_tech_roleta/src/util/list_opcions.dart';
-import 'package:expo_tech_roleta/src/style/buttom_result.dart';
-import 'package:expo_tech_roleta/src/style/buttom_custom.dart';
-import 'package:expo_tech_roleta/src/util/roulette_provider.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
+import 'package:provider/provider.dart';
 
 class Roulette extends StatefulWidget {
 
@@ -38,12 +39,13 @@ class _RouletteState extends State<Roulette> {
       ),
       body:  Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Consumer<RouletteProvider>(
+        child: Consumer<RouletteState>(
           builder: (context, provider, _) {
             return Column(
               children: [
                 Expanded(
                   child: FortuneWheel(
+                    duration: const Duration(seconds: 11),
                     onAnimationStart: () => provider.onAnimationStart(),
                     onAnimationEnd: () => provider.onAnimationEnd(),
                     selected: provider.selected.stream,

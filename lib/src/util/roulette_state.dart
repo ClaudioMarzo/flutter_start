@@ -1,23 +1,35 @@
+
 import 'dart:async';
 import 'dart:math';
-import 'package:flutter/foundation.dart';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:expo_tech_roleta/src/util/list_opcions.dart';
+import 'package:flutter/foundation.dart';
 
-class RouletteProvider extends ChangeNotifier {
+class RouletteState extends ChangeNotifier {
   late AudioCache _audioCache;
+  late AudioPlayer _audioPlayer;
   final List<String> items = ListOpcions.getOpcions();
   final StreamController<int> selected = StreamController<int>.broadcast();
   int? currentIndex;
-  bool isSpinning = false;
+  bool _isSpinning = false;
+
+  bool get isSpinning => _isSpinning;
   
-  @override
-  void initState() {
-    super.initState();
+  set isSpinning(bool value) {
+    _isSpinning = value;
+    if (_isSpinning) {
+      _playSpinSound();
+    } else {
+      _stopSpinSound();
+    }
+    notifyListeners();
+  }
+
+  RouletteState() {
+    _audioPlayer = AudioPlayer();
     _audioCache = AudioCache(prefix: 'assets/sounds/');
     _audioCache.load('spin_sound.mp3');
-  }
-  RouletteProvider() {
     // Para capturar o resultado selecionado
     selected.stream.listen((index) {
       currentIndex = index;
@@ -25,7 +37,28 @@ class RouletteProvider extends ChangeNotifier {
       notifyListeners();
     });
   }
-  
+
+  Future<void> _playSpinSound() async {
+    try {
+      await _audioPlayer.stop(); // Stop any previous playback
+      await _audioPlayer.play(AssetSource('sounds/rodaroda.mp3'));
+    } catch (e) {
+      if (kDebugMode) {
+        print('Error playing sound: $e');
+      }
+    }
+  }
+
+  Future<void> _stopSpinSound() async {
+    try {
+      await _audioPlayer.stop();
+    } catch (e) {
+      if (kDebugMode) {
+        print('Error stopping sound: $e');
+      }
+    }
+  }
+
   void spinRoulette() {
     if (isSpinning) return; // Evita múltiplos giros simultâneos
     

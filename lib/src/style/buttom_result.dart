@@ -1,4 +1,4 @@
-import 'package:expo_tech_roleta/src/util/roulette_provider.dart';
+import 'package:expo_tech_roleta/src/util/roulette_state.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,7 +7,7 @@ class ButtomResult extends StatelessWidget {
 
    @override
    Widget build(BuildContext context) {
-    return Consumer<RouletteProvider>(
+    return Consumer<RouletteState>(
         builder: (_, provider, __) {
           return Container(
             margin: const EdgeInsets.only(top: 30.0),

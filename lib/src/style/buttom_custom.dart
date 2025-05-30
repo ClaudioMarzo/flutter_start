@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:expo_tech_roleta/src/util/roulette_provider.dart';
+import 'package:expo_tech_roleta/src/util/roulette_state.dart';
 
 class ButtomCustom extends StatefulWidget {
 
@@ -14,7 +14,7 @@ class _ButtomCustomState extends State<ButtomCustom> {
 
    @override
    Widget build(BuildContext context) {
-    return Consumer<RouletteProvider>(
+    return Consumer<RouletteState>(
         builder: (_, provider, __) {
           return FloatingActionButton.extended(
             backgroundColor: const Color.fromARGB(255, 53, 5, 2),
