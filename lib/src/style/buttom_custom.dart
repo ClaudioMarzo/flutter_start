@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:expo_tech_roleta/src/util/RouletteProvider.dart';
+import 'package:expo_tech_roleta/src/util/roulette_provider.dart';
 
 class ButtomCustom extends StatefulWidget {
 

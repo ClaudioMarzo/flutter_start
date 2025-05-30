@@ -1,4 +1,4 @@
-import 'package:expo_tech_roleta/src/util/RouletteProvider.dart';
+import 'package:expo_tech_roleta/src/util/roulette_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -10,11 +10,11 @@ class ButtomResult extends StatelessWidget {
     return Consumer<RouletteProvider>(
         builder: (_, provider, __) {
           return Container(
-            margin: const EdgeInsets.only(top: 24.0),
+            margin: const EdgeInsets.only(top: 30.0),
             padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 100.0),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
-                colors: [Color.fromARGB(255, 53, 5, 2), Colors.red],
+                colors: [Colors.red, Colors.red],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -28,7 +28,7 @@ class ButtomResult extends StatelessWidget {
               ],
             ),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
+              // mainAxisSize: MainAxisSize.min,
               children: [
                 provider.isSpinning ?
                 const Text(

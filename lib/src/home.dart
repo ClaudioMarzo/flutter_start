@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:expo_tech_roleta/src/roulette.dart';
-import 'package:expo_tech_roleta/src/util/RouletteProvider.dart';
+import 'package:expo_tech_roleta/src/util/roulette_provider.dart';
 
 class Home extends StatefulWidget {
   const Home({ super.key });

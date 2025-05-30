@@ -2,9 +2,9 @@
 class ListOpcions {
   static List<String> getOpcions() {
     return [
-      'Option 1',
-      'Option 2',
-      'Option 3',
+      'Brinde surpresa',
+      'Brinde surpresa',
+      'Brinde surpresa',
       'Option 4',
       'Option 5',
     ];

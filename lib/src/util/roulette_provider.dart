@@ -1,14 +1,22 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/foundation.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:expo_tech_roleta/src/util/list_opcions.dart';
 
 class RouletteProvider extends ChangeNotifier {
+  late AudioCache _audioCache;
   final List<String> items = ListOpcions.getOpcions();
   final StreamController<int> selected = StreamController<int>.broadcast();
   int? currentIndex;
   bool isSpinning = false;
   
+  @override
+  void initState() {
+    super.initState();
+    _audioCache = AudioCache(prefix: 'assets/sounds/');
+    _audioCache.load('spin_sound.mp3');
+  }
   RouletteProvider() {
     // Para capturar o resultado selecionado
     selected.stream.listen((index) {

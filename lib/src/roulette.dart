@@ -6,7 +6,7 @@ import 'package:expo_tech_roleta/src/util/style_title.dart';
 import 'package:expo_tech_roleta/src/util/list_opcions.dart';
 import 'package:expo_tech_roleta/src/style/buttom_result.dart';
 import 'package:expo_tech_roleta/src/style/buttom_custom.dart';
-import 'package:expo_tech_roleta/src/util/RouletteProvider.dart';
+import 'package:expo_tech_roleta/src/util/roulette_provider.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
 
 class Roulette extends StatefulWidget {
